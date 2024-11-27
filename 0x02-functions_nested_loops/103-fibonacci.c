@@ -9,29 +9,26 @@
  * Return: 0.
  */
 
-
 int main(void)
 {
 	int i;
-	unsigned long int j, k, highest, sum;
+	unsigned long int j, k, next, sum;
 
-	i = 1;
-	j = 2;
-	highest = 0;
+	j = 1;
+	k = 2;
 	sum = 0;
 
-	while (highest <= 4000000)
+	for (i = 1; i <= 33; ++i)
 	{
-		if (j < 4000000 && (j % 2 == 0))
+		if (j < 4000000 && (j % 2) == 0)
 		{
-			sum += j;
+			sum = sum + j;
 		}
-
-		k = j;
-		j += i;
-		i = k;
-		highest++;
+		next = j + k;
+		j = k;
+		k = next;
 	}
+
 	printf("%lu\n", sum);
 
 	return (0);
