@@ -27,7 +27,7 @@ char *create_array(unsigned int size, char c)
 	for (count = 0; count < size; count++)
 		ptArray[count] = c;
 
-	*ptArray = '\0';
+	ptArray[count] = '\0';
 
 	return (ptArray);
 
