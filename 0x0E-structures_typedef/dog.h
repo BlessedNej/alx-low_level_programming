@@ -9,19 +9,18 @@
  *
  * Description: No description for this struct
  */
-
-struct dog {
+struct dog
+{
 	char *name;
 	float age;
 	char *owner;
 };
 
 /**
- * dog_b: typedef for struct dog
+ * dog_b - typedef for struct dog
  */
-
 typedef struct dog dog_b;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
-#endif 
+#endif
